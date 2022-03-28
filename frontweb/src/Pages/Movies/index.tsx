@@ -1,15 +1,14 @@
-import Navbar from 'components/Navbar';
+
 import './styles.css';
 
-
 const Movies = () => {
-    return (
-        <>
-     <Navbar />
-     <div> Movies  </div>
-     </>
-    );
-
-}
+  return (
+    <>
+      <div>
+        <h1> Movies </h1>
+      </div>
+    </>
+  );
+};
 
 export default Movies;

@@ -1,13 +1,13 @@
-import Navbar from 'components/Navbar';
+
 import './styles.css';
 
 
 const Reviews = () => {
-    return (
-        <>
-     <Navbar />
-     <div> Reviews  </div>
-     </>
+    return (<>
+        <div>
+          <h1> Reviews </h1>
+        </div>
+      </>
     );
 
 }
