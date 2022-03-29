@@ -8,6 +8,11 @@
   display: none;
 }
 
+
+.nav-login-logout {
+  display: none;
+}
+
 .nav-username {
   display: none;
 }
