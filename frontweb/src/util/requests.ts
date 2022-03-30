@@ -24,13 +24,16 @@ export const requestBackendLogin = (loginData: LoginData) => {
     grant_type: 'password',
   });
 
+  console.log(" Request -> ", data, headers);
+
   return axios({
     method: 'POST',
     baseURL: BASE_URL,
     url: '/oauth/token',
     data,
-    headers,
+    headers
   });
+  
 };
 
 export const requestBackend = (config: AxiosRequestConfig) => {
@@ -64,7 +67,7 @@ axios.interceptors.response.use(
   },
   function (error) {
     if (error.response.status === 401) {
-    history.push('/home');
+    history.push('/');
     }
     return Promise.reject(error);
   }

@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.movieflix.DTO.MovieCardDTO;
-import com.devsuperior.movieflix.DTO.MovieDetailsDTO;
-import com.devsuperior.movieflix.DTO.ReviewDTO;
+import com.devsuperior.movieflix.dto.MovieCardDTO;
+import com.devsuperior.movieflix.dto.MovieDetailsDTO;
+import com.devsuperior.movieflix.dto.ReviewDTO;
 import com.devsuperior.movieflix.services.MovieService;
 import com.devsuperior.movieflix.services.ReviewService;
 
