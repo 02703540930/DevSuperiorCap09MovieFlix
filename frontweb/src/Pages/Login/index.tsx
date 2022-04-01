@@ -34,7 +34,6 @@ const Login = () => {
   const history = useHistory();
 
   const onSubmit = (formData: FormData) => {
-    console.log(" Antes do request -> ", formData);
     requestBackendLogin(formData)
       .then((response) => {
        saveAuthData(response.data);
@@ -48,7 +47,6 @@ const Login = () => {
       .catch((error) => {
         setHasError(true);
         console.log('ERRO', error);
-        console.log(" Caiu no catch -> ", formData);
       });
   };
 

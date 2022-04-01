@@ -24,8 +24,6 @@ export const requestBackendLogin = (loginData: LoginData) => {
     grant_type: 'password',
   });
 
-  console.log(" Request -> ", data, headers);
-
   return axios({
     method: 'POST',
     baseURL: BASE_URL,

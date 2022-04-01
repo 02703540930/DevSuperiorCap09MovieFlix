@@ -1,5 +1,4 @@
 import Navbar from 'components/Navbar';
-import PrivateRoute from 'components/PrivateRoute';
 import Home from 'Pages/Home';
 import Movies from 'Pages/Movies';
 import Reviews from 'Pages/Reviews';
@@ -13,12 +12,12 @@ const Routes = () => (
       <Route path="/home" exact>
         <Home />
       </Route>
-      <Route path="/movies" >
+      <Route path="/movies" exact >
         <Movies />
       </Route>
-      <PrivateRoute path="/movies/:moveisId">
+      <Route path="/movies/:moveisId">
         <Reviews />
-      </PrivateRoute>
+      </Route>
     </Switch>
   </Router>
 );

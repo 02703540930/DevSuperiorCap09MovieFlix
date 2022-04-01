@@ -7,7 +7,6 @@ import history from 'util/history';
 import { AuthContext } from 'AuthContext';
 
 const Navbar = () => {
-
   const { authContextData, setAuthContextData } = useContext(AuthContext);
 
   useEffect(() => {
@@ -29,29 +28,31 @@ const Navbar = () => {
     setAuthContextData({
       authenticated: false,
     });
-    history.replace('/');
+    history.replace('/home');
   };
 
+  console.log('Email: ', authContextData.tokenData?.user_name);
 
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
-      <div>
-        
-        <Link to='/'  className="nav-logo-text">
+      <div >
+        <Link to="/home" className="nav-logo-text">
           <h4>Movieflix</h4>
         </Link>
-        <div className="nav-login-logout">
-          {authContextData.authenticated ? (
-            <>
-              <span className="nav-username">{authContextData.tokenData?.user_name}</span>
-              <a href="#logout" onClick={handleLogoutClick}>
-                LOGOUT
-              </a>
-            </>
-          ) : (
-            <Link to="/home">LOGIN</Link>
-          )}
-        </div>
+      </div>
+      <div className="nav-login-logout">
+        {authContextData.authenticated ? (
+          <>
+            <span className="nav-username">
+              {authContextData.tokenData?.user_name}
+            </span>
+            <a href="#logout" onClick={handleLogoutClick} className="btn-sair">
+              Sair
+            </a>
+          </>
+        ) : (
+          <Link to="/home" className='btn-login'>Login</Link>
+        )}
       </div>
     </nav>
   );
