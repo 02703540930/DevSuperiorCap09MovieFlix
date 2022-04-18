@@ -1,6 +1,9 @@
 import { Review } from "types/review";
 
 
+import './styles.css';
+
+
 
 type ListingReviews = {
     reviews: Review[];

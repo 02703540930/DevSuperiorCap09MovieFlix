@@ -1,0 +1,59 @@
+
+.review-text {
+    display: flex;
+    align-items: center;
+    background: #6C6C6C;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    height: 157px;
+    width: 300px;
+    top: 30px;
+    border: 2px red;
+    
+  }
+  .review-text button {
+    display: flex;
+    background: #FFC700;
+    border-radius: 4px;
+    width: 280px;
+    height: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    padding-top: 10px;
+    
+
+  }
+   
+  .text {
+    display: flex;
+    text-align: left;
+    left: 3.33%;
+    right: 3.33%;
+    top: 12.74%;
+    bottom: 55.41%;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 280px;
+    height: 50px;
+
+  }
+  .text input {
+    display: flex;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    width: 280px;
+    height: 50px;
+    border-radius: 4px;
+    
+    color: #9E9E9E;
+
+  }

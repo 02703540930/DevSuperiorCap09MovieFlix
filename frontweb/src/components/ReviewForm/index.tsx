@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { Review } from 'types/review';
 import { requestBackend } from 'util/requests';
 
+import './styles.css';
+
 type Props = {
   movieId: string;
   onIsertReview: (review: Review) => void;
@@ -41,11 +43,11 @@ const ReviewForm = ({ movieId, onIsertReview }: Props) => {
       });
   };
   return (
-    <div>
-      <div>
+    <div className='review-text'>
+      <div >
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            <input
+          <div className='text'>
+            <input 
               {...register('text', {
                 required: 'Campo obrigatório !',
               })}
@@ -55,7 +57,7 @@ const ReviewForm = ({ movieId, onIsertReview }: Props) => {
             />
             <div>{errors.text?.message}</div>
           </div>
-          <button type="submit">SALVA AVALIAÇÃO</button>
+          <button className='button-confirm' type="submit">SALVAR AVALIAÇÃO</button>
         </form>
       </div>
     </div>
